@@ -1,7 +1,7 @@
 # 진행 주차
 
-# 순위검색
+# 예산
 
 
 # link
-https://programmers.co.kr/learn/courses/30/lessons/72412
+https://programmers.co.kr/learn/courses/30/lessons/12982
