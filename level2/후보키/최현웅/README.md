@@ -3,7 +3,7 @@
 
 ## 문제 내용
 
-`https://programmers.co.kr/learn/courses/30/lessons/42890`
+<https://programmers.co.kr/learn/courses/30/lessons/42890>
 
 
 
