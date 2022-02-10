@@ -1,31 +1,31 @@
-> ³¯Â¥: 2022-02-10\
-> ÀÛ¼ºÀÚ: ¼Û¸í¼®
+> ë‚ ì§œ: 2022-02-10\
+> ìž‘ì„±ìž: ì†¡ëª…ì„
 
-## ¹®Á¦ ³»¿ë
+## ë¬¸ì œ ë‚´ìš©
 
 https://leetcode.com/problems/3sum/
 
 
 
-## ¹®Á¦ÀÇ ÇÙ½É ¹× Áß¿ä Æ÷ÀÎÆ®
+## ë¬¸ì œì˜ í•µì‹¬ ë° ì¤‘ìš” í¬ì¸íŠ¸
 
-DFS·Î µÎ ¼ö¸¦ ¼±ÅÃÇÏ´Â ¸ðµç °æ¿ìÀÇ ¼ö¸¦ ±¸ÇÑ ÈÄ, ³ª¸ÓÁö ÇÏ³ªÀÇ ¼ö´Â for¹®À» µ¹·Á ±¸ÇÏ´Â ¹æ½ÄÀ¸·Î Ç®¾ú´Ù°¡ ½Ã°£ ÃÊ°ú..
+DFSë¡œ ë‘ ìˆ˜ë¥¼ ì„ íƒí•˜ëŠ” ëª¨ë“  ê²½ìš°ì˜ ìˆ˜ë¥¼ êµ¬í•œ í›„, ë‚˜ë¨¸ì§€ í•˜ë‚˜ì˜ ìˆ˜ëŠ” forë¬¸ì„ ëŒë ¤ êµ¬í•˜ëŠ” ë°©ì‹ìœ¼ë¡œ í’€ì—ˆë‹¤ê°€ ì‹œê°„ ì´ˆê³¼..
 
-±×·¡¼­ https://youtu.be/jzZsG8n2R9A ¸¦ ÂüÁ¶ÇÏ¿© Ç®¾ú´Ù.
-
-
-
-## °³¼±ÇØ¾ß ÇÒ Á¡
-
-Ç®ÀÌ¸¦ ¶°¿Ã·ÈÀ¸¸é ¿ì¼± ½Ã°£º¹Àâµµ »ý°¢À» ÇÑ ÈÄ¿¡ Ç®¾î¾ß ÇÒ °Í °°´Ù.
-
-¿­½ÉÈ÷ Ç®¾î³õ°í ½Ã°£ ÃÊ°ú ¶ß¸é Âü Çã¹«ÇÏ´Ù.
+ê·¸ëž˜ì„œ https://youtu.be/jzZsG8n2R9A ë¥¼ ì°¸ì¡°í•˜ì—¬ í’€ì—ˆë‹¤.
 
 
 
-## ¼Ò½º ÄÚµå
+## ê°œì„ í•´ì•¼ í•  ì 
 
-### ½Ã°£ ÃÊ°ú ¶á ÄÚµå
+í’€ì´ë¥¼ ë– ì˜¬ë ¸ìœ¼ë©´ ìš°ì„  ì‹œê°„ë³µìž¡ë„ ìƒê°ì„ í•œ í›„ì— í’€ì–´ì•¼ í•  ê²ƒ ê°™ë‹¤.
+
+ì—´ì‹¬ížˆ í’€ì–´ë†“ê³  ì‹œê°„ ì´ˆê³¼ ëœ¨ë©´ ì°¸ í—ˆë¬´í•˜ë‹¤.
+
+
+
+## ì†ŒìŠ¤ ì½”ë“œ
+
+### ì‹œê°„ ì´ˆê³¼ ëœ¬ ì½”ë“œ
 ```c++
 #include <vector>
 #include <set>
@@ -46,7 +46,7 @@ public:
 
         depth++;
 
-        // depth°¡ 2ÀÌ¸é ¹æ¹®Ã¼Å© ¾ÈµÈ ¿ø¼Òµé Å½»ö
+        // depthê°€ 2ì´ë©´ ë°©ë¬¸ì²´í¬ ì•ˆëœ ì›ì†Œë“¤ íƒìƒ‰
         if (2 == depth)
         {
             for (int i = 0; i < nums.size(); i++)
@@ -62,7 +62,7 @@ public:
                         sumTarget.push_back(nums[i]);
 
                         sort(sumTarget.begin(), sumTarget.end());
-                        // set ÀÚ·á±¸Á¶ÀÌ¹Ç·Î Áßº¹ Ãß°¡´Â µÇÁö ¾ÊÀ½
+                        // set ìžë£Œêµ¬ì¡°ì´ë¯€ë¡œ ì¤‘ë³µ ì¶”ê°€ëŠ” ë˜ì§€ ì•ŠìŒ
                         m_answer.insert(sumTarget);
 
                         return;
@@ -71,7 +71,7 @@ public:
             }
         }
 
-        // ´ÙÀ½ depth·Î µé¾î°¨
+        // ë‹¤ìŒ depthë¡œ ë“¤ì–´ê°
         for (int i = 0; i < nums.size(); i++)
         {
             if (true == visited[i])
@@ -106,9 +106,9 @@ public:
     }
 };
 ```
-\
+<br/>
 
-### ¼öÁ¤ÇÑ ÄÚµå
+### ìˆ˜ì •í•œ ì½”ë“œ
 ```c++
 #include <vector>
 #include <algorithm>
@@ -125,7 +125,7 @@ public:
         int r = 0;
         int threeSum = 0;
 
-        // nums¸¦ ¿À¸§Â÷¼ø Á¤·Ä
+        // numsë¥¼ ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬
         // nums = [-1, 0, 1, 2, -1, -1]
         // -> [-1, -1, -1, 0, 1, 2]
         sort(nums.begin(), nums.end());
@@ -159,8 +159,8 @@ public:
                 {
                     answer.push_back(vector<int>{a, nums[l], nums[r]});
 
-                    // ¸¸¾à nums = [-2, -2, 0, 0, 0, 0, 2, 2] ÀÌ°í l = 2, r = 7 ÀÌ¸é,
-                    // l++¸¦ ÇØµµ ¶È°°Àº °ªÀÎ 0ÀÌ¹Ç·Î Áßº¹µÇ´Â °ªÀº skipÇÏµµ·Ï ÇÑ´Ù.
+                    // ë§Œì•½ nums = [-2, -2, 0, 0, 0, 0, 2, 2] ì´ê³  l = 2, r = 7 ì´ë©´,
+                    // l++ë¥¼ í•´ë„ ë˜‘ê°™ì€ ê°’ì¸ 0ì´ë¯€ë¡œ ì¤‘ë³µë˜ëŠ” ê°’ì€ skipí•˜ë„ë¡ í•œë‹¤.
                     l++;
                     while (l < r && nums[l - 1] == nums[l])
                     {
